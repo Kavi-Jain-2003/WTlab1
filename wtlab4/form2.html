@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>
+                Academic Information
+            </legend>
+            <label for="degree">Degree</label>
+            <select name="degree" id="degree">
+                <option value="MBA">Masters of Business Administration</option>
+                <option value="BBA">Bachelors of Business Administration</option>
+                <option value="MCA">Masters of Computer Application</option>
+                <option value="BCA">Bachelors of Computer Application</option>
+            </select>
+            <br>
+            <label for="studentid">Studnet Id</label>
+            <input type="text" id="studentid" name="studentid">
+            <br>
+            <label for="classes">classes attended</label>
+            <select name="classes" id="classes" multiple size="3">
+                <option value="geography">Geography</option>
+                <option value="mathematics">Mathematics</option>
+                <option value="english">English</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Personal detail</legend>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname">
+            <br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname">
+            <br>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="genders">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="genders">
+            <label for="female">Female</label>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br>
+            <textarea placeholder="TERMS AND CONDITIONS..."></textarea>
+            <br><br>
+            <input type="submit" value="send form">
+            <input type="reset" value="Clear form" id="reset">
+        </fieldset>
+    </form>
+</body>
+</html>
