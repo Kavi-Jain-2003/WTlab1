@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input
+        {
+            width: 100%;
+        }
+        select
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Wedding Request Form</h1>
+        <label for="weddate">Wedding date *</label>
+        <br>
+        <input type="text" id="weddate" name="weddate" required>
+        <br>
+        <br>
+        <label for="WABC">Has your date been confirmed with WABC pastrol office? *</label>
+        <br>
+        <select name="WABC" id="WABC" required>
+            <option value="select">please select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br><br>
+        <label for="wedtime">Wedding time *</label>
+        <input type="text" id="wedtime" name="wedtime" required>
+        <br>
+        <br>
+        <label for="fname">Name*</label>
+        <br></br>
+        <input type="text" id="fname" name="fname" required value="First" style="width: 46%;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
+        <input type="text" id="fname" name="fname" required value="Last" style="width: 46%;">
+        <br><br>
+        <label for="wheeler">Are you a member of wheeler? *</label>
+        <br>
+        <select name="wheeler" id="wheeler" required>
+            <option value="select">please select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br>
+        <br>
+        <label for="phone">Phone*</label>
+        <input type="number" required id="phone" name="phone" placeholder="### ### ####">
+        <br><br>
+        <label for="phone2">Alternate Number</label>
+        <input type="number" required id="phone2" name="phone2">
+        <br><br>
+        <label for="tocontact">Are you a member of wheeler? *</label>
+        <br>
+        <select name="tocontact" id="tocontact" required>
+            <option value="select">please select one</option>
+            <option value="morning">8 to 11 AM</option>
+            <option value="afternoon">1 to 5pm</option>
+        </select>
+        <br><br>
+        <label for="email">Email*</label>
+        <input type="email" required id="email" name="email">
+        <br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Street Address">
+        <br><br>
+        <input type="text" id="address" name="address" placeholder="Street Address line2">
+        <br><br>
+        <input type="text" id="address" name="address" placeholder="City" style="width: 46%;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
+        <input type="text" id="address" name="address" placeholder="Region" style="width: 46%;">
+        <br><br>
+        <input type="number" id="address" name="address" placeholder="Postal/Zip Code" style="width: 46%;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
+        <input type="text" id="address" name="address" placeholder="Romania" style="width: 46%;">
+        <br><br>
+        <label for="reception">Will the reception be held at WABC? *</label>
+        <br>
+        <select name="reception" id="reception" required>
+            <option value="select">please select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br><br>
+        <label for="y/nreception">If "Yes" please note the time of reception.</label>
+        <input type="text" id="y/nreception" name="y/nreception">
+        <br><br>
+        <label for="notified">Would you lie to rceive information in the mail?* </label>
+        <select name="notified" id="notified" required>
+            <option value="select">please select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br><br>
+        <center><input type="submit" value="SEND" style="width:20%; background-color: black; color: white;"></center>
+
+    </form>
+</body>
+
+</html>
