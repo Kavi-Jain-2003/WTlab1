@@ -1,0 +1,46 @@
+body
+{
+    background-color: coral;
+    color: brown;
+}
+
+.sidebar
+{
+    background-color: cornsilk;
+    width: 300px;
+    height: 1000px;
+    margin-left: 30px;
+    position: relative;
+    display: inline-block;
+}
+.sidebar .image img
+{
+    border-radius: 100px;
+    border: 12px solid coral;
+    position:absolute;
+    top: 0;
+    margin-left:40px;
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;    
+}
+.sidebar .detail1
+{
+    background-color: white;
+}
+.sidebar .detail1 .contact 
+{
+    margin-left: 20px;
+    position: absolute;
+    top: 280px;
+    background-color: cornsilk;
+}
+.main
+{
+    position: absolute;
+    display: inline-block;
+    border: 2px solid red;
+    padding: 30px;
+}
+
+
