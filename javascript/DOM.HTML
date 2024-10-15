@@ -1,31 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <p id="text"  style="display: none;">hello,world</p>
-    <button onclick="changetext()">change text</button>
-    <button onclick="changetextcolor()">Change text color</button>
+    <!-- getelementyid -->
+    <p id="text" style="display: none;">hello,world</p>
     <button onclick="hidetext()">to display the text</button>
-    <button onclick="changeimage()">to change the image</button>
+    <button onclick="changetext()"> change text</button>
+    <button onclick="changetextcolor()">Change text color</button>
+    <br>
+    <img id="myimage" src="design 15.png" alt="design1" width="200px" height="200px">
+    <button onclick="changeimage()">Change image</button>
+
+    <!-- getelementsbyclass -->
+    <p class="changetext">hello</p>
+    <p class="changetext">bye</p>
+    <button onclick="changealltext()">change all text</button>
+    <br>
+    <div class="colorbox" style="background-color: red;">box1</div>
+    <div class="colorbox" style="background-color: red;">box2</div>
+    <br>
+    <button onclick="changecolorofdiv()">change color of div</button>
+    <br>
+    <ul>
+        <li class="listitem">item1</li>
+        <li class="listitem">item2</li>
+        <li class="listitem">item3</li>
+    </ul>
+    <button onclick="addborder()">add border to list items</button>
+    <button onclick="fontsize()">to change font size of list items</button>
+    <button onclick="changelistitemcolor()">change list item color</button>
+    <!-- getelementytagname -->
+    <h2>heading 2</h2>
+    <h2>heading 2</h2>
+    <p>paragraph1</p>
+    <p>paragraph1</p>
+    <button onclick="changeheading()">change heading content</button>
+    <button onclick="addbordertopara()">add border to para</button>
+    <button onclick="changeparafontize()">change font size of para</button>
+    
+    
 
     <script>
-        function changetext()
-        {
-            document.getElementById("text").textContent="hello duniya";
+        
+        function changetext() {
+            document.getElementById("text").textContent = "hello duniya";
         }
-        function changetextcolor()
-        {
-            document.getElementById("text").style.color="red";
+        function changetextcolor() {
+            document.getElementById("text").style.color = "red";
         }
-        function hidetext()
-        {
+        function hidetext() {
             // document.getElementById("text").style.display="none";
-            document.getElementById("text").style.display="block";
+            document.getElementById("text").style.display = "block";
         }
+        function changeimage() {
+            document.getElementById("myimage").src = "design 16.png";
+        }
+        function changealltext() {
+            var elements = document.getElementsByClassName("changetext");
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].textContent = "text changed";
+            }
+        }
+        function changecolorofdiv() {
+            var boxes = document.getElementsByClassName("colorbox");
+            for (var i = 0; i < boxes.length; i++) {
+                boxes[i].style.backgroundColor = "lightblue";
+            }
+        }
+        function addborder() {
+            var items = document.getElementsByClassName("listitem");
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.border = "2px solid yellow";
+            }
+        }
+        function fontsize() {
+            var items = document.getElementsByClassName("listitem");
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.fontSize = "24px";
+            }
+        }
+        function changeheading() {
+            var headings = document.getElementsByTagName("h2");
+            for (var i = 0; i < headings.length; i++) {
+                headings[i].textContent = "heading content changed";
+            }
+        }
+        function changelistitemcolor() {
+            var listitem = document.getElementsByTagName("li");
+            for (var i = 0; i < listitem.length; i++) {
+                listitem[i].style.backgroundColor = "purple";
+            }
+        }
+        function addbordertopara() {
+            var listitem = document.getElementsByTagName("p");
+            for (var i = 0; i < listitem.length; i++) {
+                listitem[i].style.border = "2px solid purple";
+            }
+        }
+        function changeparafontize() {
+            var listitem = document.getElementsByTagName("p");
+            for (var i = 0; i < listitem.length; i++) {
+                listitem[i].style.fontSize = "30px";
+            }
+        }
+
     </script>
 </body>
+
 </html>
