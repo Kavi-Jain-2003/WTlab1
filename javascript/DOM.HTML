@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text"  style="display: none;">hello,world</p>
+    <button onclick="changetext()">change text</button>
+    <button onclick="changetextcolor()">Change text color</button>
+    <button onclick="hidetext()">to display the text</button>
+    <button onclick="changeimage()">to change the image</button>
+
+    <script>
+        function changetext()
+        {
+            document.getElementById("text").textContent="hello duniya";
+        }
+        function changetextcolor()
+        {
+            document.getElementById("text").style.color="red";
+        }
+        function hidetext()
+        {
+            // document.getElementById("text").style.display="none";
+            document.getElementById("text").style.display="block";
+        }
+    </script>
+</body>
+</html>
