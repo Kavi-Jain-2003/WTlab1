@@ -1,0 +1,16 @@
+.holiday
+{
+    color: blue;
+}
+.sunday
+{
+    color: red;
+}
+td
+{
+    color:green;
+}
+table,td
+{
+    border: 2px solid black;
+}
