@@ -35,6 +35,7 @@
     <button onclick="addborder()">add border to list items</button>
     <button onclick="fontsize()">to change font size of list items</button>
     <button onclick="changelistitemcolor()">change list item color</button>
+
     <!-- getelementytagname -->
     <h2>heading 2</h2>
     <h2>heading 2</h2>
@@ -43,11 +44,23 @@
     <button onclick="changeheading()">change heading content</button>
     <button onclick="addbordertopara()">add border to para</button>
     <button onclick="changeparafontize()">change font size of para</button>
-    
-    
 
+    <!-- query selector :it returns the first element that matches a css selector-->
+     <h1 class="example">query selector</h1>
+     <p class="example">it i having the same class as of above heading</p>
+     <button onclick="addbgcolortofirstselector()">add bg color to heading not to para</button>
+     
+    <!-- query selector all:it returns the all element that matches a css selector-->
+    <h1 class="exampley">query selector</h1>
+    <p class="exampley">it i having the same class as of above heading</p>
+    <button onclick="addbgcolortoallselector()">add bg color to heading and para both</button>
+    <p id="c1">hello world!</p>
+    <button onclick="changeetext()">change</button>
     <script>
-        
+        function changeetext()
+        {
+            document.getElementById("c1").textContent="hello universe";
+        }
         function changetext() {
             document.getElementById("text").textContent = "hello duniya";
         }
@@ -108,6 +121,18 @@
             for (var i = 0; i < listitem.length; i++) {
                 listitem[i].style.fontSize = "30px";
             }
+        }
+        function addbgcolortofirstselector()
+        {
+            document.querySelector(".example").style.backgroundColor="gold";
+        }
+        function addbgcolortoallselector()
+        {
+            const nodelist=document.querySelectorAll(".exampley");
+            for(let i=0; i<nodelist.length; i++)
+        {
+            nodelist[i].style.backgroundColor="pink";
+        }
         }
 
     </script>
