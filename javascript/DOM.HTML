@@ -49,17 +49,22 @@
      <h1 class="example">query selector</h1>
      <p class="example">it i having the same class as of above heading</p>
      <button onclick="addbgcolortofirstselector()">add bg color to heading not to para</button>
-     
+
     <!-- query selector all:it returns the all element that matches a css selector-->
     <h1 class="exampley">query selector</h1>
     <p class="exampley">it i having the same class as of above heading</p>
     <button onclick="addbgcolortoallselector()">add bg color to heading and para both</button>
     <p id="c1">hello world!</p>
-    <button onclick="changeetext()">change</button>
+    <button onclick="changeetext()">change text</button>
+    <button onclick="changeetextcolor()">change text color</button>
     <script>
         function changeetext()
         {
             document.getElementById("c1").textContent="hello universe";
+        }
+        function changeetextcolor()
+        {
+            document.getElementById("c1").style.color="blue";
         }
         function changetext() {
             document.getElementById("text").textContent = "hello duniya";
