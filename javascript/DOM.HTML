@@ -16,6 +16,25 @@
     <br>
     <img id="myimage" src="design 15.png" alt="design1" width="200px" height="200px">
     <button onclick="changeimage()">Change image</button>
+    <script>function changeetext() {
+            document.getElementById("c1").textContent = "hello universe";
+        }
+        function changeetextcolor() {
+            document.getElementById("c1").style.color = "blue";
+        }
+        function changetext() {
+            document.getElementById("text").textContent = "hello duniya";
+        }
+        function changetextcolor() {
+            document.getElementById("text").style.color = "red";
+        }
+        function hidetext() {
+            // document.getElementById("text").style.display="none";
+            document.getElementById("text").style.display = "block";
+        }
+        function changeimage() {
+            document.getElementById("myimage").src = "design 16.png";
+        }</script>
 
     <!-- getelementsbyclass -->
     <p class="changetext">hello</p>
@@ -34,53 +53,7 @@
     </ul>
     <button onclick="addborder()">add border to list items</button>
     <button onclick="fontsize()">to change font size of list items</button>
-    <button onclick="changelistitemcolor()">change list item color</button>
-
-    <!-- getelementytagname -->
-    <h2>heading 2</h2>
-    <h2>heading 2</h2>
-    <p>paragraph1</p>
-    <p>paragraph1</p>
-    <button onclick="changeheading()">change heading content</button>
-    <button onclick="addbordertopara()">add border to para</button>
-    <button onclick="changeparafontize()">change font size of para</button>
-
-    <!-- query selector :it returns the first element that matches a css selector-->
-     <h1 class="example">query selector</h1>
-     <p class="example">it i having the same class as of above heading</p>
-     <button onclick="addbgcolortofirstselector()">add bg color to heading not to para</button>
-
-    <!-- query selector all:it returns the all element that matches a css selector-->
-    <h1 class="exampley">query selector</h1>
-    <p class="exampley">it i having the same class as of above heading</p>
-    <button onclick="addbgcolortoallselector()">add bg color to heading and para both</button>
-    <p id="c1">hello world!</p>
-    <button onclick="changeetext()">change text</button>
-    <button onclick="chaneetext()">change text</button>
-    <script src="a1.js"></script>
-    <button onclick="changeetextcolor()">change text color</button>
     <script>
-        function changeetext()
-        {
-            document.getElementById("c1").textContent="hello universe";
-        }
-        function changeetextcolor()
-        {
-            document.getElementById("c1").style.color="blue";
-        }
-        function changetext() {
-            document.getElementById("text").textContent = "hello duniya";
-        }
-        function changetextcolor() {
-            document.getElementById("text").style.color = "red";
-        }
-        function hidetext() {
-            // document.getElementById("text").style.display="none";
-            document.getElementById("text").style.display = "block";
-        }
-        function changeimage() {
-            document.getElementById("myimage").src = "design 16.png";
-        }
         function changealltext() {
             var elements = document.getElementsByClassName("changetext");
             for (var i = 0; i < elements.length; i++) {
@@ -105,6 +78,19 @@
                 items[i].style.fontSize = "24px";
             }
         }
+    </script>
+
+    <!-- getelementytagname -->
+    <h2>heading 2</h2>
+    <h2>heading 2</h2>
+    <p>paragraph1</p>
+    <p>paragraph1</p>
+    <button onclick="changeheading()">change heading content</button>
+    <button onclick="addbordertopara()">add border to para</button>
+    <button onclick="changeparafontize()">change font size of para</button>
+
+    <button onclick="changelistitemcolor()">change list item color</button>
+    <script>
         function changeheading() {
             var headings = document.getElementsByTagName("h2");
             for (var i = 0; i < headings.length; i++) {
@@ -129,17 +115,32 @@
                 listitem[i].style.fontSize = "30px";
             }
         }
-        function addbgcolortofirstselector()
-        {
-            document.querySelector(".example").style.backgroundColor="gold";
+    </script>
+
+    <!-- query selector :it returns the first element that matches a css selector-->
+    <h1 class="example">query selector</h1>
+    <p class="example">it i having the same class as of above heading</p>
+    <button onclick="addbgcolortofirstselector()">add bg color to heading not to para</button>
+
+    <!-- query selector all:it returns the all element that matches a css selector-->
+    <h1 class="exampley">query selector</h1>
+    <p class="exampley">it i having the same class as of above heading</p>
+    <button onclick="addbgcolortoallselector()">add bg color to heading and para both</button>
+    <p id="c1">hello world!</p>
+    <button onclick="changeetext()">change text</button>
+    <button onclick="chaneetext()">change text</button>
+    <script src="a1.js"></script>
+    <button onclick="changeetextcolor()">change text color</button>
+    
+    <script>
+        function addbgcolortofirstselector() {
+            document.querySelector(".example").style.backgroundColor = "gold";
         }
-        function addbgcolortoallselector()
-        {
-            const nodelist=document.querySelectorAll(".exampley");
-            for(let i=0; i<nodelist.length; i++)
-        {
-            nodelist[i].style.backgroundColor="pink";
-        }
+        function addbgcolortoallselector() {
+            const nodelist = document.querySelectorAll(".exampley");
+            for (let i = 0; i < nodelist.length; i++) {
+                nodelist[i].style.backgroundColor = "pink";
+            }
         }
 
     </script>

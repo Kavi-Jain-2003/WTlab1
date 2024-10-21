@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- getelementbyid -->
+    <h1 id="headingid">getelementbyid</h1>
+    <h2 id="headingsid" style="display: none;">i m having different id name</h2>
+    <p id="paraid">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique voluptates magni eos animi
+        repellendus saepe perferendis doloribus consequatur voluptatibus quos?</p>
+    <button onclick="changetext()">to change text</button>
+    <button onclick="showtext()">to show text</button>
+    <button onclick="changecolor()">to change text color</button>
+    <button onclick="changesize()">to change text font size</button>
+    <button onclick="changebgcolor()">to change backgroundcolor</button>
+    <script>
+        function changetext() {
+            document.getElementById("headingid").innerHTML = "it is a method of DOM";
+        }
+        function showtext() {
+            document.getElementById("headingsid").style.display = "block";
+        }
+        function changecolor() {
+            document.getElementById("headingid").style.color = "yellow";
+        }
+        function changesize() {
+            document.getElementById("headingsid").style.fontSize = "40px";
+        }
+        function changebgcolor() {
+            document.getElementById("paraid").style.background = "blue";
+        }
+    </script>
+    <!-- getelementbyclass -->
+    <h3 class="headingclass">getElementById</h3>
+    <ol>
+        <li class="listitem">apple</li>
+        <li class="listitem">banana</li>
+        <li class="listitem">grapes</li>
+    </ol>
+    <h1 class="headingclass" style="display: none;">getelementbyclass</h1>
+    <h2 class="headingclass" style="display: none;">i m having different class name</h2>
+    <p class="paraclass">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique voluptates magni eos animi
+        repellendus saepe perferendis doloribus consequatur voluptatibus quos?</p>
+    <p class="paraclass">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique voluptates magni eos animi
+        repellendus saepe perferendis doloribus consequatur voluptatibus quos?</p>
+    <button onclick="changetext()">to change text</button>
+    <button onclick="showtext()">to show text</button>
+    <button onclick="changesize()">to change text font size</button>
+    <button onclick="changecolor()">to change text color</button>
+    <button onclick="addborder()">to add border</button>
+    <script>
+        function changetext() {
+            var items = document.getElementsByClassName("listitem");
+            for (var i = 0; i < items.length; i++) {
+                items[i].innerHTML = "i am fruit no.";
+            }
+        }
+        function showtext() {
+            var items = document.getElementsByClassName("headingclass");
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.display = "block";
+            }
+        }
+        function changesize() {
+            var items = document.getElementsByClassName("paraclass");
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.fontSize = "4px";
+            }
+        }
+        function changecolor() {
+            var items = document.getElementsByClassName("paraclass");
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.color = "pink";
+            }
+        }
+        function addborder() {
+            var items = document.getElementsByClassName("listitem");
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.border = "2px dashed violet";
+            }
+        }
+    </script>
+    <!-- getelementbytagnames -->
+    <h3 class="headingclass">getElementsByTagName</h3>
+    <div>change image by hovering on image</div>
+    <img src="design 15.png" width="100px" height="100px" onmouseover="changeimg()" onmouseleave="changeimg2()">
+    <h4>getElementsByTagName</h4>
+    <h4>getElementsByTagName</h4>
+    <h4>getElementsByTagName</h4>
+    <button onclick="headingtag()">to change color and bgcolor of headings</button>
+    <ul>
+        <li class="listitem">apple</li>
+        <li class="listitem">banana</li>
+        <li class="listitem">grapes</li>
+    </ul>
+    <button onclick="changebullets()">change bullets</button>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique voluptates magni eos animi
+        repellendus saepe perferendis doloribus consequatur voluptatibus quos?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique voluptates magni eos animi
+        repellendus saepe perferendis doloribus consequatur voluptatibus quos?</p>
+    <button onclick="addbordertopara()">add borders</button>
+    <a href="#">google</a>
+    <div onmouseover="changelinkcolor()">change link color</div>
+
+    <script>
+        function changeimg() {
+            var imgg = document.getElementsByTagName("img");
+            for (var i = 0; i < imgg.length; i++) {
+                imgg[i].src = "design 16.png";
+            }
+        }
+        function changeimg2() {
+            var imgg = document.getElementsByTagName("img");
+            for (var i = 0; i < imgg.length; i++) {
+                imgg[i].src = "design 15.png";
+            }
+        }
+        function headingtag() {
+            var tag = document.getElementsByTagName("h4");
+            for (var i = 0; i < tag.length; i++) {
+                tag[i].style.color = "red";
+                tag[i].style.backgroundColor = "green";
+            }
+        }
+        function changebullets() {
+            var bullet = document.getElementsByTagName("li");
+            for (var i = 0; i < bullet.length; i++) {
+                bullet[i].style.listStyleType = "square";
+                bullet[i].style.color = "red";
+            }
+        }
+        function addbordertopara() {
+            var para = document.getElementsByTagName("p");
+            for (var i = 0; i < para.length; i++) {
+                para[i].style.border = "2px solid brown";
+            }
+        }
+        function changelinkcoloron() {
+            var link = document.getElementsByTagName("a");
+            for (var i = 0; i < link.length; i++) {
+                link[i].style.color = "green";
+            }
+        }
+    </script>
+    <!-- query selector -->
+    <h1 class="example">query selector</h1>
+    <p class="example">it is having the same class as of above heading</p>
+    <button onclick="addbgcolortofirstselector()">add bg color to heading not to para</button>
+    <ul>
+        <li class="listitemm">banana</li>
+        <li class="listitemm">banana</li>
+        <li class="listitemm">banana</li>
+    </ul>
+    <button onclick="listbullet()">change bullet of first li only</button>
+    <ol>
+        <li class="listitemy">banana</li>
+        <li class="listitemy">banana</li>
+        <li class="listitemy">banana</li>
+    </ol>
+    <button onclick="listborder()">add bullet of first li only</button>
+    <button onclick="listtextchange()">change list text</button>
+    <script>
+        function addbgcolortofirstselector() {
+            document.querySelector(".example").style.backgroundColor = "gold";
+        }
+        function listbullet() {
+            document.querySelector(".listitemm").style.listStyleType = "square";
+            document.querySelector(".listitemm").style.color = "green";
+        }
+        function listborder() {
+            document.querySelector(".listitemy").style.border = "5px dashed orange";
+        }
+        function listtextchange() {
+            document.querySelector(".listitemy").innerHTML = "hello world";
+        }
+    </script>
+    <!-- queryselectorall -->
+
+    <h1 class="exampley">query selector all</h1>
+    <p class="exampley">it i having the same class as of above heading</p>
+    <h2 class="exampley examplyy">heading2</h2>
+    <p class="exampley examplyy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, tempora?</p>
+    
+    <button onclick="addbgcolortoallselector()">add bg color to heading and para both</button>
+    <button onclick="changefontsize()">change size</button>
+    <div class="divv" width="200px" height="200px">to change shape</div>
+    <div class="divv" width="200px" height="200px">to change shape</div>
+    <button onclick="adddivborder()">add border</button>
+    <button onclick="addbg()">add bg</button>
+    <button onclick="conclusion()">conclusion</button>
+
+    <script>
+        function addbgcolortoallselector() {
+            const nodelist = document.querySelectorAll(".exampley");
+            for (let i = 0; i < nodelist.length; i++) {
+                nodelist[i].style.backgroundColor = "pink";
+            }
+        }
+        function changefontsize() {
+            const nodelist = document.querySelectorAll(".examplyy");
+            for (let i = 0; i < nodelist.length; i++) {
+                nodelist[i].style.fontSize="30px";
+            }
+        }
+        function adddivborder()
+        {
+            const nodelist = document.querySelectorAll(".divv");
+            for (let i = 0; i < nodelist.length; i++) {
+                nodelist[i].style.border="2px solid red";
+            }
+        }
+        function addbg()
+        {
+            const nodelist = document.querySelectorAll(".divv");
+            for (let i = 0; i < nodelist.length; i++) {
+                nodelist[i].style.backgroundColor="gold";
+            }
+        }
+        function conclusion()
+        {
+            const nodelist = document.querySelectorAll(".divv");
+            for (let i = 0; i < nodelist.length; i++) {
+                nodelist[i].textContent="these all were the DOM METHODS";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
