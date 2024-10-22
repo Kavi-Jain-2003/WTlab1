@@ -105,7 +105,7 @@
         repellendus saepe perferendis doloribus consequatur voluptatibus quos?</p>
     <button onclick="addbordertopara()">add borders</button>
     <a href="#">google</a>
-    <div onmouseover="changelinkcolor()">change link color</div>
+    <div onmouseover="changelinkcoloron()">change link color</div>
 
     <script>
         function changeimg() {
@@ -183,18 +183,31 @@
 
     <h1 class="exampley">query selector all</h1>
     <p class="exampley">it i having the same class as of above heading</p>
-    <h2 class="exampley examplyy">heading2</h2>
-    <p class="exampley examplyy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, tempora?</p>
+
+
     
+    <h2 class="examplyy">heading2</h2>
+    <p class="examplyy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, tempora?</p>
+    <button onclick="changebg()">change bg</button>
+
+
     <button onclick="addbgcolortoallselector()">add bg color to heading and para both</button>
     <button onclick="changefontsize()">change size</button>
-    <div class="divv" width="200px" height="200px">to change shape</div>
+    <br><br>
+
+    <div class="divv" width="200px" height="200px" style="background-image: url(design\ 15.png);">to change shape</div>
     <div class="divv" width="200px" height="200px">to change shape</div>
     <button onclick="adddivborder()">add border</button>
-    <button onclick="addbg()">add bg</button>
+    
     <button onclick="conclusion()">conclusion</button>
 
     <script>
+        function changebg()
+        {
+            const nodelist = document.querySelectorAll(".examplyy");
+                nodelist.style.backgroundImage="url(design 15.png)";
+            
+        }
         function addbgcolortoallselector() {
             const nodelist = document.querySelectorAll(".exampley");
             for (let i = 0; i < nodelist.length; i++) {
@@ -214,13 +227,7 @@
                 nodelist[i].style.border="2px solid red";
             }
         }
-        function addbg()
-        {
-            const nodelist = document.querySelectorAll(".divv");
-            for (let i = 0; i < nodelist.length; i++) {
-                nodelist[i].style.backgroundColor="gold";
-            }
-        }
+        
         function conclusion()
         {
             const nodelist = document.querySelectorAll(".divv");
