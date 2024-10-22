@@ -10,28 +10,28 @@
 <body>
     <!-- getelementbyid -->
     <h1 id="headingid">getelementbyid</h1>
-    <h2 id="headingsid" style="display: none;">i m having different id name</h2>
+    <h1 id="headingsid" style="display:none;">i m having different id name</h1>
     <p id="paraid">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique voluptates magni eos animi
         repellendus saepe perferendis doloribus consequatur voluptatibus quos?</p>
-    <button onclick="changetext()">to change text</button>
-    <button onclick="showtext()">to show text</button>
-    <button onclick="changecolor()">to change text color</button>
-    <button onclick="changesize()">to change text font size</button>
-    <button onclick="changebgcolor()">to change backgroundcolor</button>
+    <button onclick="changetextid()">to change text</button>
+    <button onclick="showtextid()">to show text</button>
+    <button onclick="changecolorid()">to change text color</button>
+    <button onclick="changesizeid()">to change text font size</button>
+    <button onclick="changebgcolorid()">to change backgroundcolor</button>
     <script>
-        function changetext() {
+        function changetextid() {
             document.getElementById("headingid").innerHTML = "it is a method of DOM";
         }
-        function showtext() {
+        function showtextid() {
             document.getElementById("headingsid").style.display = "block";
         }
-        function changecolor() {
+        function changecolorid() {
             document.getElementById("headingid").style.color = "yellow";
         }
-        function changesize() {
+        function changesizeid() {
             document.getElementById("headingsid").style.fontSize = "40px";
         }
-        function changebgcolor() {
+        function changebgcolorid() {
             document.getElementById("paraid").style.background = "blue";
         }
     </script>
