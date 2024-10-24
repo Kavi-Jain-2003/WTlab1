@@ -162,7 +162,7 @@
         <li class="listitemy">banana</li>
         <li class="listitemy">banana</li>
     </ol>
-    <button onclick="listborder()">add bullet of first li only</button>
+    <button onclick="listborder()">add border to list item 1</button>
     <button onclick="listtextchange()">change list text</button>
     <script>
         function addbgcolortofirstselector() {
@@ -184,12 +184,9 @@
     <h1 class="exampley">query selector all</h1>
     <p class="exampley">it i having the same class as of above heading</p>
 
-
-    
     <h2 class="examplyy">heading2</h2>
     <p class="examplyy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, tempora?</p>
     <button onclick="changebg()">change bg</button>
-
 
     <button onclick="addbgcolortoallselector()">add bg color to heading and para both</button>
     <button onclick="changefontsize()">change size</button>
@@ -198,15 +195,15 @@
     <div class="divv" width="200px" height="200px" style="background-image: url(design\ 15.png);">to change shape</div>
     <div class="divv" width="200px" height="200px">to change shape</div>
     <button onclick="adddivborder()">add border</button>
-    
+
     <button onclick="conclusion()">conclusion</button>
 
     <script>
-        function changebg()
-        {
+        function changebg() {
             const nodelist = document.querySelectorAll(".examplyy");
-                nodelist.style.backgroundImage="url(design 15.png)";
-            
+            for (let i = 0; i < nodelist.length; i++) {
+                nodelist[i].style.backgroundColor = "green";
+            }
         }
         function addbgcolortoallselector() {
             const nodelist = document.querySelectorAll(".exampley");
@@ -217,22 +214,20 @@
         function changefontsize() {
             const nodelist = document.querySelectorAll(".examplyy");
             for (let i = 0; i < nodelist.length; i++) {
-                nodelist[i].style.fontSize="30px";
+                nodelist[i].style.fontSize = "30px";
             }
         }
-        function adddivborder()
-        {
+        function adddivborder() {
             const nodelist = document.querySelectorAll(".divv");
             for (let i = 0; i < nodelist.length; i++) {
-                nodelist[i].style.border="2px solid red";
+                nodelist[i].style.border = "2px solid red";
             }
         }
-        
-        function conclusion()
-        {
+
+        function conclusion() {
             const nodelist = document.querySelectorAll(".divv");
             for (let i = 0; i < nodelist.length; i++) {
-                nodelist[i].textContent="these all were the DOM METHODS";
+                nodelist[i].textContent = "these all were the DOM METHODS";
             }
         }
     </script>
